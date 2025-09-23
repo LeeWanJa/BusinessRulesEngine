@@ -1,5 +1,9 @@
 package test;
 
+// mockito 임포트
+import static org.mockito.Mockito.*;
+
+import main.Action;
 import main.BusinessRuleEngine;
 import org.junit.jupiter.api.Test;
 
@@ -21,5 +25,16 @@ public class BusinessRuleEngineTest {
         businessRuleEngine.addAction(() -> {});
 
         assertEquals(2, businessRuleEngine.count());
+    }
+
+    @Test
+    void shouldExecuteOneAction(){
+        final BusinessRuleEngine businessRuleEngine = new BusinessRuleEngine();
+        final Action mockAction = mock(Action.class);
+
+        businessRuleEngine.addAction(mockAction);
+        businessRuleEngine.run();
+
+        verify(mockAction).perform();
     }
 }

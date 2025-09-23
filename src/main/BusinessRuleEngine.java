@@ -19,6 +19,6 @@ public class BusinessRuleEngine {
     }
 
     public void run(){
-        throw new  UnsupportedOperationException("Not supported yet.");
+        this.actions.forEach(Action::perform);
     }
 }

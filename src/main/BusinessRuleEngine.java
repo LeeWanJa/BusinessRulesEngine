@@ -1,15 +1,24 @@
 package main;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BusinessRuleEngine {
+    private final List<Action> actions;
+
+    public BusinessRuleEngine() {
+        this.actions = new ArrayList<>();
+    }
+
     public void addAction(final Action action){
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.actions.add(action);
     }
 
     public int count(){
-        throw new UnsupportedOperationException("Not supported yet.");
+        return this.actions.size();
     }
 
     public void run(){
-        throw new UnsupportedOperationException("Not supported yet.");
+        throw new  UnsupportedOperationException("Not supported yet.");
     }
 }

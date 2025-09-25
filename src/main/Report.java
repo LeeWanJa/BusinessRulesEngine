@@ -1,18 +1,18 @@
 package main;
 
 public class Report {
-    private final ConditionalAction conditionalAction;
+    private final Action action;
     private final Facts facts;
     private final boolean isPositive;
 
-    public Report(final Facts facts, final ConditionalAction conditionalAction, final boolean isPositive) {
+    public Report(final Facts facts, final Action action, final boolean isPositive) {
         this.facts = facts;
-        this.conditionalAction = conditionalAction;
+        this.action = action;
         this.isPositive = isPositive;
     }
 
-    public ConditionalAction getConditionalAction() {
-        return conditionalAction;
+    public Action getConditionalAction() {
+        return action;
     }
 
     public Facts getFacts() {
@@ -26,7 +26,7 @@ public class Report {
     @Override
     public String toString() {
         return "Report{" +
-                "conditionalAction=" + conditionalAction +
+                "conditionalAction=" + action +
                 ", facts=" + facts +
                 ", result=" + isPositive +
                 '}';

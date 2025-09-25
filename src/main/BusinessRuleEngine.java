@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BusinessRuleEngine {
-    private final List<ConditionalAction> actions;
+    private final List<Action> actions;
     private final Facts facts;;
 
     public BusinessRuleEngine(final Facts facts) {
@@ -12,7 +12,7 @@ public class BusinessRuleEngine {
         this.facts = facts;
     }
 
-    public void addAction(final ConditionalAction action){
+    public void addAction(final Action action){
         this.actions.add(action);
     }
 
@@ -21,6 +21,6 @@ public class BusinessRuleEngine {
     }
 
     public void run(){
-        this.actions.forEach(action -> action.perform(facts));
+        this.actions.forEach(action -> action.execute(facts));
     }
 }

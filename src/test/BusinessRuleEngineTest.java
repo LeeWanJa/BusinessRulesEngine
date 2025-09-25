@@ -4,7 +4,7 @@ package test;
 import static org.mockito.Mockito.*;
 
 import main.BusinessRuleEngine;
-import main.ConditionalAction;
+import main.Action;
 import main.Facts;
 import org.junit.jupiter.api.Test;
 
@@ -24,8 +24,8 @@ public class BusinessRuleEngineTest {
         final Facts mockFacts = mock(Facts.class);
         final BusinessRuleEngine businessRuleEngine = new BusinessRuleEngine(mockFacts);
 
-        final ConditionalAction mockAction1 = mock(ConditionalAction.class);
-        final ConditionalAction mockAction2 = mock(ConditionalAction.class);
+        final Action mockAction1 = mock(Action.class);
+        final Action mockAction2 = mock(Action.class);
         businessRuleEngine.addAction(mockAction1);
         businessRuleEngine.addAction(mockAction2);
 
@@ -34,14 +34,14 @@ public class BusinessRuleEngineTest {
 
     @Test
     public void shouldPerformAnActionWithFacts(){
-        final ConditionalAction mockAction = mock(ConditionalAction.class);
+        final Action mockAction = mock(Action.class);
         final Facts mockFacts = mock(Facts.class);
         final BusinessRuleEngine businessRuleEngine = new BusinessRuleEngine(mockFacts);
 
         businessRuleEngine.addAction(mockAction);
         businessRuleEngine.run();
 
-        verify(mockAction).perform(mockFacts);
+        verify(mockAction).execute(mockFacts);
     }
     
 }

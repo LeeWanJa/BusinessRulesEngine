@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class Main {
     public static void main(String[] args) {
         Facts fact = new Facts();
-        fact.addFact("jobTitle", "CEO");
+        // fact.addFact("jobTitle", "CEO");
 
 //        BusinessRuleEngine businessRuleEngine = new BusinessRuleEngine(fact);
 //

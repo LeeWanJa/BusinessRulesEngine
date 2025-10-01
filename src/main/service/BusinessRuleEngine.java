@@ -1,4 +1,7 @@
-package main;
+package main.service;
+
+import main.domain.Facts;
+import main.domain.Rule;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,9 @@
-package main;
+package main.service;
+
+import main.domain.Action;
+import main.domain.Condition;
+import main.domain.DefaultRule;
+import main.domain.Rule;
 
 public class RuleBuilder {
     private Condition condition;

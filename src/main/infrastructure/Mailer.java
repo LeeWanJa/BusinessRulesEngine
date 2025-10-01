@@ -1,4 +1,4 @@
-package main;
+package main.infrastructure;
 
 public class Mailer {
     public static void sendMail(String target, String content){

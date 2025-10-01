@@ -1,6 +1,8 @@
 package main;
 
-import java.util.HashMap;
+import main.infrastructure.Mailer;
+import main.domain.Rule;
+import main.service.RuleBuilder;
 
 public class Main {
     public static void main(String[] args) {

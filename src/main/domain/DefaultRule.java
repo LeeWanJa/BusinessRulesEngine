@@ -1,10 +1,8 @@
-package main;
-
-import javax.swing.*;
+package main.domain;
 
 public class DefaultRule implements Rule {
     private final Condition condition;
-    private final Action action;
+    private final main.domain.Action action;
 
     public DefaultRule(Condition condition, Action action) {
         this.condition = condition;

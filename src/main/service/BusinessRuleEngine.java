@@ -15,6 +15,10 @@ public class BusinessRuleEngine {
         this.facts = facts;
     }
 
+    public void addRule(final Rule rule){
+        this.rules.add(rule);
+    }
+
     public void run(){
         this.rules.forEach(rule -> rule.perform(facts));
     }
